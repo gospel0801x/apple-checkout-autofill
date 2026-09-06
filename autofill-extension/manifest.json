@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "表单秒填 Autofill Kit",
+  "version": "0.1.1",
+  "description": "Apple 结算页自动填充（本地扩展版，不依赖篡改猴）",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.apple.com.cn/*", "https://*.apple.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
